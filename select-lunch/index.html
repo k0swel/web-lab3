@@ -75,7 +75,7 @@
                 <div class="dish-element">
                     <img src="./drinks/orange-juice.webp" alt="Апельсиновый сок" class="image-dish"/>
                     <p class="price-dish">120&#8381;</p>
-                    <p class="name-dish">Апельсиновый суп</p>
+                    <p class="name-dish">Апельсиновый сок</p>
                     <p class="weight-dish">180 мл</p>
                     <button class="btn-add-to-buy-list">Добавить</button>
                 </div>
@@ -96,6 +96,101 @@
             </div>
         </section>
     </main>
+    <section class="take-order">
+        <h2>Сделать заказ</h2>
+        <div class="form-container">
+            <form method="POST" action="https://httpbin.org/post" id="form">
+                <section class="take-order-part">
+                    <h3 class="take-order-header">Ваш заказ</h3>
+                    <section class="select-soup-section">
+                        <label for="choose-soup-id">Выберите суп</label>
+                        <br/>
+                        <select name="soup" id="choose-soup-id" required>
+                            <option value="">--Выберите суп--</option>
+                            <option value="borzh-russian-soup">Борщ русский</option>
+                            <option value="mushroom-soup">Грибной суп</option>
+                            <option value="schi-soup">Щи</option>
+                        </select>
+                    </section>
+                    <section class="seleсt-main-dish-section">
+                        <label for="choose-main-dish-id">Выберите главное блюдо</label>
+                        <br/>
+                        <select name="main-dish" id="choose-main-dish-id">
+                            <option value="">--Выберите главное блюдо--</option>
+                            <option value="buckwheat-main-dish">Гречка</option>
+                            <option value="dumplings-main-dish">Пельмени</option>
+                            <option value="pilaf-main-dish">Плов</option>
+                        </select>  
+                    </section>
+                    <section class="seleсt-drink-section">
+                        <label for="choose-drink-id">Выберите напиток</label>
+                        <br/>
+                        <select name="drink" id="choose-drink-id">
+                            <option value="">--Выберите напиток--</option>
+                            <option value="orange-juice-drink">Апельсиновый сок</option>
+                            <option value="lemonade-drink">Лимонад</option>
+                            <option value="black-tea-drink">Чёрный чай</option>
+                        </select>  
+                    </section>
+                    <section class="additional-comment-section">
+                        <label for="input-additional-comment-id">Комментарии к заказу</label>
+                        <br/>
+                        <textarea name="additional-comment" id="input-additional-comment-id" placeholder="Пожелания к заказу."></textarea>
+                    </section>
+                </section>
+                <section class="customer-data-part">
+                    <h3 class="customer-data-header">Ваши данные</h3>
+                    <section class="name-section">
+                        <label for="customer-name-id">Имя</label>
+                        <br/>
+                        <input type="text" name="customer-name" id="customer-name-id" placeholder="Введите ваше имя." required></input>
+                    </section>
+                    <section class="email-section">
+                        <label for="customer-email-id">Email</label>
+                        <br/>
+                        <input type="text" name="customer-email" id="customer-email-id" placeholder="Введите ваш email." required></input>
+                        <br/>
+                        <div class="promotional-consent-container">
+                            <input type="checkbox" name="promotional-consent" id="promotional-consent-id" checked></input>
+                            <label for="promotional-consent-id" id="promotional-label-id">Получать информацию о скидках и акциях</label>
+                        </div>                     
+                    </section>
+                    <section class="phone-section">
+                        <label for="phone-number-id">Номер телефона</label>
+                        <br/>
+                        <input type="tel" name="phone-number" id="phone-number-id" placeholder="Введите ваш номер телефона." required   ></input>
+                    </section>
+                    <section class="address-section">
+                        <label for="delivery-address-id">Адрес доставки</label>
+                        <br>
+                        <input type="text" name="delivery-address" id="delivery-address-id" placeholder="Введите ваш адрес доставки" required></input>
+                        <br>
+                        <label for="delivery-address-id"><em>Доставка осуществляется в пределах г.Москва</em></label>
+                    </section>
+                    <section class="delivery-time-section">
+                        <p>Время доставки</p>
+                        <fieldset class="radio-buttons" form="form">
+                            <input type="radio" name="delivery-time-type" value="faster" id="faster-id"></input>
+                            <label for="faster-id">Как можно скорее</label>
+                            <br/>
+                            <input type="radio" name="delivery-time-type" value="by-the-time" id="by-the-time-id"></input>
+                            <label for="by-the-time-id">К определенному времени</label>
+                        </fieldset>
+
+                        <label for="time-delivery-id">Укажите время доставки</label>
+                        <br/>
+                        <input type="time" name="delivery-time" id="time-delivery-id" step="5">
+                        <br>
+                        <label for="time-delivery-id">Доступное время доставки с <em>7:00 до 23:00</em></label>
+                    </section>
+                    <div class="button-container">
+                        <button type="reset">Сбросить</button>
+                        <button type="submit">Отправить</button>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </section>
     <footer>
         <p>Позвоните нам: <a href="tel:+79000000000">+7-900-000-00-00</a></p>
         <p>Приятного аппетита!</p>
