@@ -6,7 +6,6 @@
 
 body, html {
     width: 100vw;
-    overflow-x: hidden;
 }
 
 header {
@@ -147,7 +146,6 @@ main > section > h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 10px;
-    justify-items: center;
 }
 
 
@@ -190,12 +188,12 @@ fieldset {
     .take-order-part > section, .customer-data-part > section {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: start;
     }
 
-    
-        
-
+    .take-order-part > section > label, .customer-data-part > section > label {
+        align-self: flex-start;
+    }
 
     .take-order-part > section, .customer-data-part > section {
         margin-bottom: 1rem;
@@ -211,8 +209,6 @@ fieldset {
         width: 100%;
         height: 2.5rem;
     }
-
-   
 
     .take-order-part textarea {
         height: 5rem;
@@ -367,7 +363,7 @@ fieldset {
 @media(max-width: 400px) {
     body, html {
     width: 100vw;
-    overflow-x: visible !important;
+    overflow-x: hidden;
     
     }
     header {
@@ -389,45 +385,15 @@ fieldset {
     width: 80%;
     }
 
-    .button-container {
-     margin: 0 0.5rem;
-    }
-
     .form {
         grid-template-columns: 1fr !important;
-        justify-content: center !important;
+        justify-items: center !important;
         gap: 0.3rem !important;
     }
-    .form h3 {
-    	text-align: center;
-    }
-
-    .promotional-consent-container {
-     display: flex;
-     flex-direction: row;
-     justify-content: center;
-     align-items: center;
-     gap: 0.5rem;
-    }
-    
-   
-  
-   
-    
 
     .form > section {
         /* border: 1px solid green; */
         justify-self: center;
-    }
-    input, fieldset, select, textarea {
-    width: 80% !important;
-    }
-
-    fieldset > input[type="radio"] {
-    width: auto !important;
-    }
-    input[type="checkbox"] {
-    width: auto !important;
     }
 }
 
