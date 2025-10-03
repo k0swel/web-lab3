@@ -4,6 +4,10 @@
 
 /* СЕЛЕКТОРЫ ПО ТЕГУ */
 
+body, html {
+    width: 100vw;
+}
+
 header {
     position: fixed;
     top: 0px;
@@ -278,7 +282,11 @@ fieldset {
     background-color: black;
     color: white;
     padding: 0 2rem;
-}
+    }
+
+    main {
+        width: 100vw;
+    }
 
 
     .dish-container {
@@ -295,6 +303,10 @@ fieldset {
         justify-items: center;
         font-size: 1.5rem;
         text-wrap: nowrap;
+    }
+
+    .form {
+        margin: 0 0.5rem;
     }
 }
 
@@ -348,8 +360,25 @@ fieldset {
 
 
 @media(max-width: 400px) {
-    main {
-        overflow-x: hidden;
+    header {
+    flex-direction: column;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        flex-wrap:wrap;
+        justify-content: center;
+    }
+
+    .form {
+        grid-template-columns: 1fr !important;
+        justify-items: center !important;
+        gap: 0.3rem !important;
+    }
+
+    .form > section {
+        /* border: 1px solid green; */
+        justify-self: center;
     }
 }
 
