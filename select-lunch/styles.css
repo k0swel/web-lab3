@@ -390,8 +390,13 @@ fieldset {
     }
 
     .button-container {
-     margin: 0 0.5rem;
+     flex-direction: column;
+      margin: 0 0.5rem;
     }
+
+  
+   
+    
 
     .form {
         grid-template-columns: 1fr !important;
@@ -429,5 +434,17 @@ fieldset {
     input[type="checkbox"] {
     width: auto !important;
     }
+
+    footer  {
+     padding: 0.5rem;
+     flex-direction: column;
+     height: auto;
+    }
+
+    footer > * {
+    text-align: center;
+    margin: 0 0.5rem;
+    }
+
 }
 
